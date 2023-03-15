@@ -1,0 +1,163 @@
+body {
+    background-color: #A89288;
+    font-family: courier, monospace;
+}
+
+#header {
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 20px 0px 50px;
+    padding:20px;
+    align-items:flex-start;
+}
+
+.header_pic {
+    width:15%;
+    height:auto;
+}
+
+main {
+    font-size:large;
+    color:white;
+}
+
+footer {
+    font-size: large;
+    text-align: center;
+    background-color:white;
+}
+
+footer div {
+    margin:0px 0px 0px 0px;
+}
+
+/*links*/
+header a, main a {
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    padding:20px;
+    color:white;
+    word-spacing: 1px;
+}
+
+a:link:active {
+    text-decoration: underline;
+}
+
+header a:hover, main a:hover {
+    text-decoration: underline;
+    color:white;
+}
+
+footer a {
+    color:white;
+    text-decoration: none;
+    padding:10px;
+    color:#A89288;
+    word-spacing: 1px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color:#A89288;
+}
+
+/*flexbox*/
+.main_flexbox {
+    margin-top: 200px;
+    margin-bottom:150px;
+    margin-right:20px;
+    margin-left:20px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    flex-wrap:nowrap;
+}
+
+.main_flexbox > div {
+    flex-grow:2;
+    width: 50%;
+    max-width:90%;
+    margin: 0px 30px 0px 30px;
+}
+
+.flexbox_pic {
+    width:100%;
+    height:auto;
+}
+
+/*type selectors*/
+p {
+    margin: 50px 0px 50px 0px;
+}
+
+button {
+    border-radius:12px;
+    padding:26px 32px;
+    background-color:transparent;
+    color:white;
+    border: 2px solid white;
+}
+
+button:hover {
+    background-color:white;
+    color:black;
+}
+
+/*gallery*/
+.gallery {
+    margin:225px 50px 0px 50px;
+}
+
+
+/*responsive navigation bar*/
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a,.topnav button {
+        display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: right;
+    }
+    /*aesthetic specifics when accessed via mobile*/
+    #header {
+        position:static;
+    }
+    .main_flexbox {
+        flex-wrap:wrap;
+        flex-basis:100%;
+    }
+    .header_pic {
+        min-width:35%;
+        height:auto;
+    }
+    .main_flexbox {
+        margin-top: 20px;
+    }
+    .gallery {
+        margin:0px 50px 0px 50px;
+    }
+}
